@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        pre {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <pre id="output"></pre>
+
+    <script>
+        let output = document.getElementById("output");
+
+        // Task 1: Print name and address
+        let name = "Harinarayan kumar";
+        let address = "motihari ";
+        output.innerText += "1. Name: " + name + "\n";
+        output.innerText += "   Address: " + address + "\n\n";
+
+        // Task 2: Check value and data type of two variables
+        let a = 100;
+        let b = "100";
+        let sameTypeAndValue = (a === b); // strict comparison
+        output.innerText += "2. Are value and type same? " + sameTypeAndValue + "\n\n";
+
+        // Task 3: Add two strings and return uppercase
+        let str1 = "HN";
+        let str2 = "Sharma";
+        let combinedStr = (str1 + str2).toUpperCase();
+        output.innerText += "3. Combined Uppercase String: " + combinedStr + "\n\n";
+
+        // Task 4: Convert string length to bytes
+        let strBytes = "JavaScript is awesome!";
+        let byteLength = new TextEncoder().encode(strBytes).length;
+        output.innerText += "4. Byte Length of String: " + byteLength + " bytes\n\n";
+
+        // Task 5: Round number to specific digits
+        let number = 3.14159265;
+        let digits = 3;
+        let rounded = number.toFixed(digits);
+        output.innerText += "5. Rounded Number (" + digits + " digits): " + rounded + "\n";
+    </script>
+
+</body>
+</html>
